@@ -11,8 +11,8 @@ const path = require('path')
 
     // -------- Server Setup Function -------- //
 
-async function setupServer() {
-    const PORT = 3000;
+    async function setupServer() {
+    let port = process.env.PORT || 8080
     const app = express();
 
     // Database Setup //
@@ -43,9 +43,8 @@ async function setupServer() {
 
     // Listener //
 
-    app.listen(3000, () => {
-        console.log('Server Has Started')
-    });
+    app.listen(port);
+    console.log('Server Has Started');
 
 }
 
