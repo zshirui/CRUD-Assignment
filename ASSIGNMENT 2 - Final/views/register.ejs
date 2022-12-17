@@ -1,0 +1,32 @@
+<html>
+    <head> 
+
+        <title>Blog - Register</title>
+
+    </head>
+
+    <body>
+        <div class="layout">
+            <%- include('partials/nav.ejs') %>
+
+            <h1 class="title">Register</h1>
+
+            <!-- Registration Form -->
+            
+            <form id="registrationform" action="/register" method="POST">
+                <input name="firstname" type="text" id="firstname" placeholder="First Name" required />
+                <input name="lastname" type="text" id="lastname" placeholder="Last Name" required />
+                <input name="email" type="email" id="email" placeholder="Email" required />
+                <input name="password" type="password" id="password" placeholder="Password" required />
+                <input name="profileimg"  type="text" id="profileimg" placeholder="Image URL" image/*">
+                
+                <button type="submit" onclick="return confirmation(), defaultpfp()">Register</button> <!-- Submitting executes function for confirmation and default profile picture -->
+            </form>
+
+            <%- include('partials/footer.ejs') %>
+
+        </div>
+    </body>
+
+    <script src='../js/script.js'></script>
+</html>

@@ -1,0 +1,45 @@
+
+<!-- Head Partial -->
+
+<%- include('../partials/head.ejs'); -%>
+
+<!-- Bootsrap Responsive Navbar (From Documentation w/ Adjustments) -->
+
+<nav class="navbar  navbar-expand-lg">
+
+  
+  <a class="navbar-brand  " href="/">   
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/02/DotBlog_domain_logo.png" width="120" height="55" alt="">  <!-- Logo taken from: https://en.wikipedia.org/wiki/.blog -->
+  </a>
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      
+      <span class="navbar-toggler-icon"></span>
+    
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end " id="navbarNavAltMarkup">
+      
+      <div class="navbar-nav ">
+
+
+<!-- Navbar changes according to the user being logged in or not -->       
+
+        <% if (locals.user) { %>
+        <a class="nav-item nav-link" href="/newblog">New Blog</a>
+
+        <a class="nav-item nav-link" href="/profile"> Profile </a> 
+        
+        <a class="nav-item nav-link" href="/logout">Logout</a>
+        
+        <% } else { %>
+
+        <a class="nav-item nav-link" href="/register">Register</a>
+        <a class="nav-item nav-link" href="/login">Login</a>
+
+        <% } %>
+
+      </div>
+    </div>
+  </nav>

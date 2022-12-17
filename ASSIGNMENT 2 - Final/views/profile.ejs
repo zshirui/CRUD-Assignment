@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <head> 
+
+            <!-- Title based on logged user -->
+
+            <title> Blog - <%= locals.user.firstname %> <%= locals.user.lastname %> </title>
+            
+        </head>
+    </head>
+
+    <body>
+
+        <div class="layout">
+            
+            <%- include('partials/nav.ejs') %>
+    
+            <h1 class="title"> Profile </h1>
+
+            <!-- Profile picture based on logged user -->
+
+            <img class="profileimg" src="<%= locals.user.profileimg %> "> 
+
+            <!-- Profile information based on logged user -->
+    
+            <div class ="wrapperprofile d-flex flex-column justify-content-center align-items-center">
+                
+                    <h3>Name:</h3>
+                    <h2 class="profilename">  <%= locals.user.firstname %> <%= locals.user.lastname %>   </h2>
+                    <h3>Email:</h3>
+                    <h2 class="profileemail">  <%= locals.user.email %>  </h2>
+
+            </div> 
+
+            <%- include('partials/footer.ejs') %>
+
+        </div>
+
+    </body>
+</html>

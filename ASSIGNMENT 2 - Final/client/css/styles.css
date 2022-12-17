@@ -1,0 +1,304 @@
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+
+/* ------------ Index Page ------------ */
+
+
+.navbar  navbar-expand-lg {
+    width: 200px;
+}
+.navbar-nav {
+    font-size: 25px;
+    font-weight: 600;    
+}
+
+.navbar-nav a {
+    color: white;
+    transition: 0.3s;
+}
+
+.navbar-nav a:hover {
+    color: #98D1C1;
+}
+
+
+
+/* ------------ Index Page ------------ */
+
+.layout {
+    width: 85%;
+    padding: 1% 2.5%;
+    margin: auto;
+}
+
+
+.title {
+    margin-bottom: 40px;
+    text-align: center;
+    color: #f5f5f5;
+    font-weight: 800;
+}
+
+.welcome {
+    margin-top: 40px;
+    text-align: center;
+    color: #98D1C1;
+    font-weight: 400;
+}
+
+
+.wrapper img {
+
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+li .authorbox {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.bloglist-li h2{
+    margin: 0px;
+}
+
+ol {
+    list-style: none;
+    margin-top: 30px;
+    padding: 0px;
+}
+
+.wrapper {
+
+    width: 50%;
+    border-radius: 40px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.08);
+    line-height: 0px;
+    margin-bottom: 100px;
+}
+
+.wrapper a {
+    text-decoration: none;
+    color: #f5f5f5;
+}
+
+.wrapper h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+
+.wrapper h1:hover {
+    color: #98D1C1;
+    text-decoration: none;
+}
+
+.wrapper h2 {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+
+}
+
+.postdivider {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ------------ Profile Page ------------ */
+
+.layout .profileimg {
+
+    display: flex;
+    margin: auto;
+    object-fit: cover;
+    align-content: center;
+    border-radius: 50px;
+    border: 5px solid #98D1C1;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 40px;
+}
+
+.wrapperprofile {
+
+    width: 35%;
+    border-radius: 40px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 100px;
+}
+
+.wrapperprofile h1 {
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+
+.wrapperprofile h1:hover {
+    color: #98D1C1;
+    text-decoration: none;
+}
+
+.wrapperprofile h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.7);
+
+}
+
+/* ------------ Forms ------------ */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 35%;
+    padding: 50px;
+    border-radius: 40px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.08);
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+button {
+    background-color: #f8f8f8;
+    transition: 0.3s;
+    border-radius: 20px;
+    margin: auto;
+    width: 50%;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #98D1C1;
+}
+
+input {
+    padding: 5px 20px;
+}
+
+/* ------------ Posts ------------ */
+
+.layoutpost {
+    width: 85%;
+    padding: 1% 2.5%;
+    margin: auto;
+}
+
+.containerpost {
+    width: 99%;
+    padding: 1% 2.5%;
+    margin-top: 20px;
+}
+
+.authorboxpost {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+.authorboxpost img {
+
+    border-radius: 10px;
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.authorboxpost h2 {
+    font-size: 20px !important;
+    font-weight: 400 !important;
+
+}
+
+.existing-title {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 20px;
+
+}
+
+.containerpost h2 {
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+.containerpost .blogimage {
+
+    max-width: 900px;
+
+
+}
+
+.containerpost p {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: 400;
+
+}
+
+.divider {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* ------------ 404 ------------ */
+
+.chain {
+
+    display: flex;
+    margin: auto;
+    object-fit: cover;
+    align-content: center;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 40px;
+
+}
+
+.title404 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #f5f5f5;
+    font-weight: 800;
+}

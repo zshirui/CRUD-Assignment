@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <head> 
+
+            <title>Blog - New Post</title>
+            
+        </head>
+    </head>
+
+    <body>
+        <div class="layout">
+
+            <%- include('partials/nav.ejs') %>
+
+            <!-- Welcome message based on logged user -->
+
+            <% if (locals.user) { %>
+
+                <h4 class="welcome"> Welcome,  <%= locals.user.firstname %> </h4>
+    
+                <% } %>
+
+            <h1 class="title">New Blog</h1>
+            
+            <form method="POST" action="/newBlog">
+                <input type="text" placeholder="Blog Title" name="title" required>
+                <input type="text" placeholder="Sub-title" name="subtitle" required>
+                <input type="text" placeholder="Image URL" name="blogimage" required>
+                <textarea placeholder="Blog Content" name="content" required></textarea>
+                <input type = "hidden" name="authorphoto" value="<%= locals.user.profileimg %>"> <!-- Passing hidden data from the logged user to the database to be fetched later -->
+                <input type = "hidden" name="author" value="<%= locals.user.firstname%> <%= locals.user.lastname%>"> <!-- Passing hidden data from the logged user to the database to be fetched later -->
+                <button type="submit">Submit</button>
+            </form>
+            
+            <%- include('partials/footer.ejs') %>
+       
+        </div>
+    </body>
+</html>

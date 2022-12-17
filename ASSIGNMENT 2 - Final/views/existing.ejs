@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title >Blog - <%= blogData.title %> </title>
+    </head>
+
+    <body>
+
+        <div class="layoutpost">
+
+                <%- include('partials/nav.ejs') %>  
+
+            <div class="containerpost">
+
+                    <h1 class="existing-title"><%= blogData.title %></h1>
+
+                    <h2> <em> <%= blogData.subtitle %> </em> </h2>
+                    
+                    <hr class="divider" />
+                    
+                    <img class="blogimage" src="<%= blogData.blogimage %>">
+
+                    <p> <%= blogData.content %> </p>
+
+                    <div class="authorboxpost">
+                        <img id="authorimage" src="<%= blogData.authorphoto %>">
+                        <h2 id="author"> <em> by: <%= blogData.author %> </em> </h2>
+                    </div>
+
+
+                    <%- include('partials/footer.ejs') %>
+            </div>
+        </div>
+    </body>
+</html>

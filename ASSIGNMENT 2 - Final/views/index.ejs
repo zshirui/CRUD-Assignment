@@ -1,0 +1,57 @@
+<html>
+    <%- include('partials/head.ejs') %>
+    
+    <head> 
+
+        <title>Blog - Index</title>
+        
+    </head>
+
+    <body>
+
+        <div class="layout">
+
+            <!-- Welcome message based on logged user -->
+            
+            <%- include('partials/nav.ejs') %>
+
+            <% if (locals.user) { %>
+
+                <h4 class="welcome"> Welcome,  <%= locals.user.firstname %> </h4>
+    
+                <% } %>
+
+            <h1 class="title"> New Posts </h1>
+
+            <div class ="wrapper d-flex flex-column justify-content-center align-items-center">
+
+                        <!-- List with forEach loop to fetch all blog data and display each specific post in index with templates -->
+
+                        <ol class="bloglist" reversed>
+
+                            <% blogData.forEach(element => { %>
+
+                                <li class="bloglist-li">
+
+                                    <a href="/blog/<%= element.slug %>"> <h1 id="title"> <%= element.title %> </h1> </a>
+
+                                    <div class="authorbox">
+                                        <img id="authorimage" src="<%= element.authorphoto %>">
+                                        <h2 id="author"> <em> by: <%= element.author %> </em> </h2>
+                                    </div>
+
+                                    <hr class="postdivider" />
+                            
+                                </li>
+
+                            <% }) %>
+                        </ol>
+        
+                </div>  
+            </div> 
+            
+            <%- include('partials/footer.ejs') %>
+
+        </div>
+    </body>
+</html>
